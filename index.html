@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Local Appcues Integration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--Appcues integation Script start-->
+    <script type="text/javascript">
+        window.AppcuesSettings = { enableURLDetection: true }; /*This is used to determine 
+                                                                the user’s URL for effective 
+                                                                flow targeting and cross-page experiences.*/
+    </script>
+    
+    <script src="//fast.appcues.com/211726.js"></script>
+     <!--Appcues integation Script end-->
+
+
+</head>
+<body>
+
+    <!--Appcues unique and custom attribute code start-->
+    <script>
+        
+        var userId = 13000    // This user id should be unique for each user
+        Appcues.identify(userId, {
+            fold2:"particular_page"
+            //email: "btechaids21135@smvec.ac.in",
+           
+        });
+
+        Appcues.page();/*If not implemented this way, your end users could experience
+                        a delay due to events buffering
+                        while waiting on a user to be identified.*/
+    </script>
+     <!--Appcues unique and custom attribute code end-->
+    
+    <div>
+        <a href="./particular_page/particular.html" id="indexid">Click here to navigate</a>
+        <button type="button">Click me</button>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Local Appcues Integration - Next Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript">
+        window.AppcuesSettings = { enableURLDetection: true };
+    </script>
+ 
+    <script src="//fast.appcues.com/211726.js"></script>
+</head>
+<body>
+    <script>
+        var userId = 13000
+        Appcues.identify(userId, {
+            email: "btechaids21135@smvec.ac.in",
+            fold1:"another_page",
+        });
+        Appcues.page();
+    </script>
+    
+    <div>
+        <a href="./another_page/no.html" id="panxid">Go to no page</a>
+    </div>
+</body>
+</html>
